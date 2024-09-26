@@ -1,3 +1,3 @@
 6.1 
-- When user choose "cancel" then the result will be: You've chosen: No
+- When user choose "Cancel" then the result will be: You've chosen: No
 - I have written a new solution in 6.1\ChoosingOptionAdjust1 and 6.1\ChoosingOptionAdjust2, i utilize showOptionDialog instead of showConfirmDialog for more flexibility and control over the user options.
