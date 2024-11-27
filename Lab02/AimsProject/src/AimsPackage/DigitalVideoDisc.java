@@ -73,4 +73,13 @@ public class DigitalVideoDisc {
     public static int getNbDigitalVideoDiscs() {
         return nbDigitalVideoDiscs;
     }
+
+    @Override
+    public String toString() {
+        return this.id + ". DVD: " + this.title +
+                " - Category: " + this.category +
+                " - Director: " + this.title +
+                " - DVD length: " + this.length +
+                " - Cost: " + this.cost + "$";
+    }
 }
