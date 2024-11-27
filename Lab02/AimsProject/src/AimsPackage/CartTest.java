@@ -13,5 +13,7 @@ public class CartTest {
         cart.addDigitalVideoDisc(dvd3);
 
         cart.print();
+        cart.searchByID(3);
+        cart.searchByTitle("Frozn");
 
     }
