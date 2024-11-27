@@ -82,4 +82,9 @@ public class DigitalVideoDisc {
                 " - DVD length: " + this.length +
                 " - Cost: " + this.cost + "$";
     }
+
+    
+    public boolean isMatch(String title) {
+        return this.title.equalsIgnoreCase(title); 
+    }
 }
