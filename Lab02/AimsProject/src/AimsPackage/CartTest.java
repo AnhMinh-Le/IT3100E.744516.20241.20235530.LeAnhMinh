@@ -14,5 +14,9 @@ public class CartTest {
 
         cart.print();
 
+        cart.searchByID(1);
+        cart.searchByTitle("r");
+
+
     }
 }
