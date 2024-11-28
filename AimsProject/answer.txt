@@ -1,0 +1,39 @@
+QUESTION IN 2.1:
+Try to add a method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd. 
+Compare to an array parameter. What do you prefer in this case? 
+- I prefer array approach since it give me easier way to call it and i am more familiar with array.
+- However since the second method can be used for array too so i think it is more convinent since it can used in may usecases.
+	public void addDigitalVideoDisc(DigitalVideoDisc [] dvdList) {
+		int i = 1;
+		for (DigitalVideoDisc disc : dvdList) {
+			System.out.println("Consider the dvd number "+i+":") ;
+			addDigitalVideoDisc(disc);
+			i=i+1;
+		}
+		return;
+	}
+	
+	//Method addDigitalVideoDisc which allows to pass an arbitrary number of arguments for dvd:
+
+	public void addDigitalVideoDisc(DigitalVideoDisc... dvds) {
+	    for (int i = 0; i < dvds.length; i++) {
+	        System.out.println("Consider the dvd number " + (i + 1) + ":");
+	        addDigitalVideoDisc(dvds[i]);
+	    }
+	} 
+
+QUESTION IN 3:
+1. Is JAVA a Pass by Value or a Pass by Reference programming language?  
+Java is strictly a Pass-by-Value programming language
+2. After the call of swap(jungleDVD, cinderellaDVD) why does the title of these two objects still remain? 
+- In Java, method arguments are passed by value, including object references. When you pass jungleDVD and cinderellaDVD to the swap method, the method receives copies of these references, not the actual references from the main method.
+- Inside the swap method, you only swap the local copies (o1 and o2) of these references. The original references in the main method (jungleDVD and cinderellaDVD) are unaffected.
+- As a result, after the swap method call, jungleDVD still points to the object with the title "Jungle," and cinderellaDVD still points to the object with the title "Cinderella."
+3. After the call of changeTitle(jungleDVD, cinderellaDVD.getTitle()) why is the title of the JungleDVD changed? 
+-The changeTitle method directly modifies the object that the jungleDVD reference points to.
+- dvd.setTitle(title) modifies the title of the object referred to by dvd (which, in this case, is the same object that jungleDVD refers to).
+- The line dvd = new DigitalVideoDisc(oldTitle) creates a new object with the oldTitle, but this new object is only assigned to the local dvd variable in the changeTitle method. The original jungleDVD reference in main still points to the same object that was modified by setTitle.
+- Hence, after the changeTitle method call, the title of the object referenced by jungleDVD has been updated to "Cinderella."
+4. Write a toString() method for the DigitalVideoDisc class. What should be the return type of
+this method?
+The return type should be String
