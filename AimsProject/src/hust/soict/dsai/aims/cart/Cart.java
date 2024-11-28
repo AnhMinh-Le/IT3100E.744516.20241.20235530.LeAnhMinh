@@ -1,3 +1,6 @@
+package hust.soict.dsai.aims.cart;
+import hust.soict.dsai.aims.media.DigitalVideoDisc;
+
 public class Cart {
     
     public static final int MAX_NUMBERS_ORDERED = 20;
@@ -70,6 +73,43 @@ public class Cart {
         }
     }
     
+    public void searchByCategory(String category) {
+        boolean found = false;
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].getCategory().equalsIgnoreCase(category)) {
+                System.out.println("Found" + itemsOrdered[i]);
+                found = true;
+            }
+        }
+        if (!found) {
+            System.out.println("Sorry, no DVDs matching the \"" + category + "\" category were found!");
+        }
+    }
+
+    public void searchByPrice(float maxCost) {
+        boolean matchFound = false;
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].getCost() <= maxCost) {
+                System.out.println("Found" + itemsOrdered[i]);
+                matchFound = true;
+            }
+        }
+        if (!matchFound) {
+            System.out.println("Sorry, no DVDs were found that match the maximum cost provided!");
+        }
+    }
+    public void searchByPrice(float minCost, float maxCost) {
+        boolean matchFound = false;
+        for (int i = 0; i < qtyOrdered; i++) {
+            if (itemsOrdered[i].getCost() >= minCost && itemsOrdered[i].getCost() <= maxCost) {
+                System.out.println("Found" + itemsOrdered[i]);
+                matchFound = true;
+            }
+        }
+        if (!matchFound) {
+            System.out.println("Sorry, no DVDs were found that match the cost range between your specified minimum and maximum!");
+        }
+    }
 
     public void searchByID(int id) {
         boolean found = false;
