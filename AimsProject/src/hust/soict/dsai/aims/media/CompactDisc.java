@@ -13,13 +13,27 @@ public class CompactDisc extends Media {
     }
 
 
-    public CompactDisc(String title) {
-        super(title);
-    }
     public CompactDisc(String title, String category, String artist, float cost) {
-        super(title, category, cost);
-        this.artist = artist;
-    }
+		super(title, category, cost);
+		this.artist = artist;
+        this.tracks = new ArrayList<>();
+	}
+	
+
+	public CompactDisc(String title, String category, float cost) {
+		super(title, category, cost);
+        this.tracks = new ArrayList<>();
+	}
+
+	public CompactDisc(String title, String category) {
+		super(title, category);
+        this.tracks = new ArrayList<>();
+	}
+
+	public CompactDisc(String title) {
+		super(title);
+        this.tracks = new ArrayList<>();
+	}
 
     public void addTrack(Track track) {
         if (!tracks.contains(track)) {

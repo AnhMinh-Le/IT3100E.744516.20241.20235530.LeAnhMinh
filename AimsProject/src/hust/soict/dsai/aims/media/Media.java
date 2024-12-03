@@ -43,5 +43,5 @@ public abstract class Media {
     public void setTitle(String title) {
         this.title = title;
     }
-    
+
 }
