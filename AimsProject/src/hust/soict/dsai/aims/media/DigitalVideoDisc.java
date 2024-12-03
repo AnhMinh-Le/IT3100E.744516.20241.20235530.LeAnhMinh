@@ -29,5 +29,4 @@ public class DigitalVideoDisc extends Disc{
     public boolean isMatch(String title) {
         return this.getTitle().toLowerCase().contains(title.toLowerCase());
     }
-    
 }

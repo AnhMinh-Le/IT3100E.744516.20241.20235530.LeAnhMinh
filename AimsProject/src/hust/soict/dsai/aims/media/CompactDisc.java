@@ -2,7 +2,7 @@ package hust.soict.dsai.aims.media;
 
 import java.util.ArrayList;
 
-public class CompactDisc extends Media {
+public class CompactDisc extends Disc {
 
     private String artist;
     private ArrayList<Track> tracks; 
