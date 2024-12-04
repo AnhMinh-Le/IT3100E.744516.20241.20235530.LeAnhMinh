@@ -45,18 +45,6 @@ public class Cart {
         }
     }
 
-    public void searchByCategory(String category) {
-        boolean found = false;
-        for (Media media : itemsOrdered) {
-            if (media.getCategory().equalsIgnoreCase(category)) {
-                System.out.println("Found " + media);
-                found = true;
-            }
-        }
-        if (!found) {
-            System.out.println("Sorry, no media matching the \"" + category + "\" category were found!");
-        }
-    }
 
     public void searchByID(int id) {
         boolean found = false;

@@ -44,4 +44,8 @@ public abstract class Media {
         this.title = title;
     }
 
+    public boolean isMatch(String title) {
+        return this.getTitle().toLowerCase().contains(title.toLowerCase());
+    }
+
 }
