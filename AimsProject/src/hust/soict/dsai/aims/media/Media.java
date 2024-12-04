@@ -57,4 +57,10 @@ public abstract class Media {
 
 
     }
+    @Override
+    public String toString() {
+        return "Media: " + this.getTitle() +
+                " - Category: " + this.getCategory() +
+                " - Cost: " + this.getCost() + "$";
+    }
 }

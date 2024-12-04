@@ -31,4 +31,11 @@ public class Book extends Media {
             System.out.println("No author has been found to remove!");
         }
     }
+
+    @Override
+    public String toString() {
+        return this.getId() + " - Book: " + this.getTitle() +
+                " - Category: " + this.getCategory() +
+                " - Cost: " + this.getCost() + "$";
+    }
 }
