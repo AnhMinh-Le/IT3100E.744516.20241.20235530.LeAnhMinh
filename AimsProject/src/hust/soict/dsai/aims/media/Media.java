@@ -86,6 +86,6 @@ public abstract class Media implements Comparable<Media> {
             return titleComparison;
         } else {
             return Double.compare(this.getCost(), other.getCost());
-        }
+        }   
     }
 }
