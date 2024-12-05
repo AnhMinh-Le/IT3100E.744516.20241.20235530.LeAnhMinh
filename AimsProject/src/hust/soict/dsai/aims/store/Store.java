@@ -7,6 +7,7 @@ public class Store {
 
     private ArrayList<Media> itemsInStore = new ArrayList<Media>();
 
+    // Add and remove media from the store
     public void addMedia(Media media) {
         if (itemsInStore.contains(media)) {
             System.out.println("The media " + media.getTitle() + " is already in the store!");
@@ -23,19 +24,25 @@ public class Store {
         }
     }
 
-
+    // Print the store
     public void print() {
         if (itemsInStore.size() == 0) {
             System.out.println("The store is empty!");
         } else {
             System.out.println("********************STORE INVENTORY********************");
-            int i = 0;
             for (Media media : itemsInStore) {
-                i +=1;
-                System.out.println(i +" - " + media);
+                System.out.println(media);
             }
             System.out.println("********************************************************");
         }
     }
 
+    public Media search(String title) {
+		for (Media media : itemsInStore) {
+			if (media.getTitle().equals(title)) {
+				return media;
+			}
+		}
+		return null;
+	}
 }
