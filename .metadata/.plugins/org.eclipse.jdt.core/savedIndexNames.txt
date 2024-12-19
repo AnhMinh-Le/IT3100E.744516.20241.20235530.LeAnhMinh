@@ -1,0 +1,4 @@
+INDEX VERSION 1.134+C:\Users\IDEAPAD\IT3100E.744516.20241.20235530.LeAnhMinh\.metadata\.plugins\org.eclipse.jdt.core
+1865797976.index
+633970006.index
+372246821.index
